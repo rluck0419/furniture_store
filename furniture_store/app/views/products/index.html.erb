@@ -4,10 +4,15 @@
   <article>
     <h3><%= product.name %></h3>
 
-    <p><%= product.price %></p>
-    <p><%= product.condition %></p>
-    <p><%= product.on_clearance %></p>
-    <p><%= product.quantity %></p>
+    <p>List Price: $<%= product.price %></p>
+    <p>Current Price: $<%= product.display_price %>
+    <% if product.on_clearance %>
+      <%= "- 10% off!!!" if product.condition == 'good' %>
+      <%= "- 20% off!!!" if product.condition == 'average' %>
+    <% end %></p>
+    <p>Condition: <%= product.condition %></p>
+    <!-- <p>On clearance?: <%= product.on_clearance %></p> -->
+    <p>Quantity: <%= product.quantity %></p>
 
   </article>
 <% end %>
