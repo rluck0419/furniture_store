@@ -1,0 +1,13 @@
+<h2>Mallory Furniture</h2>
+
+<% products.each do |product| %>
+  <article>
+    <h3><%= product.name %></h3>
+
+    <p><%= product.price %></p>
+    <p><%= product.condition %></p>
+    <p><%= product.on_clearance %></p>
+    <p><%= product.quantity %></p>
+
+  </article>
+<% end %>
