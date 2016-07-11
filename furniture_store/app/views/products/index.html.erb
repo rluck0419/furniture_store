@@ -1,8 +1,11 @@
 <h2>Mallory Furniture</h2>
+<h4><a href="/">Home</a></h4>
+<h4><a href="/products">Products</a></h4>
+
 
 <% products.each do |product| %>
   <article>
-    <h3><%= product.name %></h3>
+    <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
 
     <p>List Price: $<%= product.price %></p>
     <p>Current Price: $<%= product.display_price %>
