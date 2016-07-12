@@ -6,21 +6,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <style media="screen" type="text/css">
-
-      header {
-        font-family: helvetica, arial, sans-serif;
-        background-color: blue;
-        color: white;
-      }
-
-    </style>
   </head>
 
   <body>
-    <header>
-      <center><h1>Mallory Furniture</h1></center>
-    </header>
+    <div class='site-header'>
+      <h1>Mallory Furniture</h1>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -1,49 +1,23 @@
-<html>
-  <head>
-    <style media="screen" type="text/css">
+  <span style="float:right">
+    <a href="/"><img src="http://i.imgur.com/aztiI42.jpg" width="50" height="50" alt="Home"></a>
+    </br>
+    <a href="/products"><img src="http://i.imgur.com/9hp55zN.jpg" width="50" height="50" alt="Back"></a>
+  </span>
 
-      header {
-        font-family: helvetica, arial, sans-serif;
-        background-color: blue;
-        color: white;
-      }
+  <article class='img_box'>
+    <img src="http://www.revelryeventdesigners.com/wp-content/uploads/2011/05/Gold-chair.jpg" width="400" height="400" alt="image of <% product.name %>">
+  </article>
 
-      body {
-        font-family: helvetica, arial, sans-serif;
-      }
+  <article class='show_box'>
+    <h3><%= product.name %></h3>
 
-      .box2 {
-        display: inline-block;
-        width: 400px;
-        height: 200px;
-        margin: 1em;
-      }
-    </style>
-  </head>
+    <p>List Price: $<%= product.price %></p>
+    <p>Current Price: $<%= product.display_price %>
+    <% if product.on_clearance %>
+      <%= "- 10% off!!!" if product.condition == 'good' %>
+      <%= "- 20% off!!!" if product.condition == 'average' %>
+    <% end %></p>
+    <p>Condition: <%= product.condition %></p>
+    <p>In Stock: <%= product.quantity %></p>
 
-  <body>
-    <span style="float:right">
-      <a href="/"><img src="http://i.imgur.com/aztiI42.jpg" width="50" height="50" alt="Home"></a>
-      </br>
-      <a href="/products"><img src="http://i.imgur.com/9hp55zN.jpg" width="50" height="50" alt="Back"></a>
-    </span>
-
-    <article class='box2'>
-      <img src="http://www.revelryeventdesigners.com/wp-content/uploads/2011/05/Gold-chair.jpg" width="400" height="400" alt="image of <% product.name %>">
-    </article>
-
-    <article class='box2'>
-      <h3><%= product.name %></h3>
-
-      <p>List Price: $<%= product.price %></p>
-      <p>Current Price: $<%= product.display_price %>
-      <% if product.on_clearance %>
-        <%= "- 10% off!!!" if product.condition == 'good' %>
-        <%= "- 20% off!!!" if product.condition == 'average' %>
-      <% end %></p>
-      <p>Condition: <%= product.condition %></p>
-      <p>In Stock: <%= product.quantity %></p>
-
-    </article>
-  </body>
-</html>
+  </article>
