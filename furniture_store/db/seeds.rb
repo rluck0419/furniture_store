@@ -7,5 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 20.times do
-  Product.create!(name: Faker::Commerce.product_name, price: Faker::Commerce.price.round, condition: ['good', 'average', 'mint'].sample, on_clearance: [true, false].sample, quantity: rand(1..10))
+  Product.create!(
+    name: Faker::Commerce.product_name,
+    price: Faker::Commerce.price.round,
+    picture: Faker::Avatar.image,
+    condition: ['good', 'average', 'mint'].sample,
+    on_clearance: [true, false].sample,
+    quantity: rand(1..10)
+  )
 end
