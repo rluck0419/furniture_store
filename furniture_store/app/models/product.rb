@@ -5,6 +5,8 @@ class Product < ApplicationRecord
   validates :on_clearance, inclusion: { in: [true, false] }
   validates :quantity, numericality: { only_integer: true }
 
+  belongs_to :category
+
   def display_price
     if on_clearance
       self.price *= 0.9 if condition.downcase == 'good'
