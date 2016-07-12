@@ -11,17 +11,26 @@
       body {
         font-family: helvetica, arial, sans-serif;
       }
+
+      .box2 {
+        display: inline-block;
+        width: 250px;
+        height: 100px;
+        margin: 1em;
+      }
+
     </style>
   </head>
 
   <body>
     <span style="float:right">
       <a href="/"><img src="http://i.imgur.com/aztiI42.jpg" width="50" height="50" alt="Home"></a>
+      </br>
       <a href="/"><img src="http://i.imgur.com/9hp55zN.jpg" width="50" height="50" alt="Back"></a>
     </span>
 
     <% products.each do |product| %>
-      <article>
+      <article class='box2'>
         <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
 
         <p>List Price: $<%= product.price %></p>
