@@ -1,18 +1,37 @@
-<h2>Mallory Furniture</h2>
-<h4><a href="/">Home</a></h4>
-<h4><a href="/products">Products</a></h4>
+<html>
+  <head>
+    <style media="screen" type="text/css">
 
+      header {
+        font-family: helvetica, arial, sans-serif;
+        background-color: blue;
+        color: white;
+      }
 
-<article>
-  <h3><%= product.name %></h3>
+      body {
+        font-family: helvetica, arial, sans-serif;
+      }
+    </style>
+  </head>
 
-  <p>List Price: $<%= product.price %></p>
-  <p>Current Price: $<%= product.display_price %>
-  <% if product.on_clearance %>
-    <%= "- 10% off!!!" if product.condition == 'good' %>
-    <%= "- 20% off!!!" if product.condition == 'average' %>
-  <% end %></p>
-  <p>Condition: <%= product.condition %></p>
-  <p>Quantity: <%= product.quantity %></p>
+  <body>
+    <span style="float:right">
+      <a href="/"><img src="http://i.imgur.com/aztiI42.jpg" width="50" height="50" alt="Home"></a>
+      <a href="/products"><img src="http://i.imgur.com/9hp55zN.jpg" width="50" height="50" alt="Back"></a>
+    </span>
 
-</article>
+    <article>
+      <h3><%= product.name %></h3>
+
+      <p>List Price: $<%= product.price %></p>
+      <p>Current Price: $<%= product.display_price %>
+      <% if product.on_clearance %>
+        <%= "- 10% off!!!" if product.condition == 'good' %>
+        <%= "- 20% off!!!" if product.condition == 'average' %>
+      <% end %></p>
+      <p>Condition: <%= product.condition %></p>
+      <p>In Stock: <%= product.quantity %></p>
+
+    </article>
+  </body>
+</html>
