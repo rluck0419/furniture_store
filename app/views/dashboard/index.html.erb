@@ -4,8 +4,4 @@
 
   <div class='home-text'><p class='cat-button'><%= link_to "Checkout our products", "/products", class: 'category' %></p></div>
   <div class='home-text'><p class='cat-button'><%= link_to "Checkout our categories", "/categories", class: 'category' %></p></div>
-
-  <% categories.each do |cat| %>
-    <div class='home-text'><p class='cat-button'><%= link_to cat.category_name, "/categories/#{cat.id}", class: 'category' %></p></div>
-  <% end %>
 </section>

@@ -1,11 +1,11 @@
-<div class='button'><a href="/"><img src="http://i.imgur.com/aztiI42.jpg" width="60" height="60" alt="Home"></a></div>
-<div class='button2'><a href="/"><img src="http://i.imgur.com/9hp55zN.jpg" width="60" height="60" alt="Back"></a></div>
+<div class='button'><%= link_to(image_tag("http://i.imgur.com/aztiI42.jpg", width: "60", height: "60", alt: "Home"), "/") %></div>
+<div class='button2'><%= link_to(image_tag("http://i.imgur.com/9hp55zN.jpg", width: "60", height: "60", alt: "Back"), "/") %></div>
 
 <h2>All Products</h2>
 <% products.each do |product| %>
   <article class='index-box'>
-    <h3 class='item-pic'><img src= "<%= product.picture %>" width="200" height="200" alt="image of <%= product.name %>"></h3>
-    <h4 class='item-name'><a href="/products/<%= product.id %>"><%= product.name %></a></h4>
+    <h3 class='item-pic'><%= image_tag product.picture, width: "200", height: "200", alt: "image of #{product.name}" %></h3>
+    <h4 class='item-name'><%= link_to product.name, "/products/#{product.id}" %></h4>
 
     <p class='item-info'>
       List Price: $<%= product.price %>
@@ -17,8 +17,8 @@
 
     <p>
       <div class='item-button'>
-        <a class='more-info' href="/products/<%= product.id %>">More Info</a>
-        <a class='category' href="/categories/<%= product.category_id %>"><%= product.category.category_name %></a>
+        <%= link_to "More Info", "/products/#{product.id}", class: 'more-info' %>
+        <%= link_to product.category.category_name, "/categories/#{product.category_id}", class: 'category' %>
       </div>
     </p>
   </article>

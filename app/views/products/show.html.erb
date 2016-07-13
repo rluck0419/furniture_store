@@ -1,8 +1,8 @@
-<div class='button'><a href="/"><img src="http://i.imgur.com/aztiI42.jpg" width="60" height="60" alt="Home"></a></div>
-<div class='button2'><a href="/products"><img src="http://i.imgur.com/9hp55zN.jpg" width="60" height="60" alt="Back"></a></div>
+<div class='button'><%= link_to(image_tag("http://i.imgur.com/aztiI42.jpg", width: "60", height: "60", alt: "Home"), "/") %></div>
+<div class='button2'><%= link_to(image_tag("http://i.imgur.com/9hp55zN.jpg", width: "60", height: "60", alt: "Back"), "/products") %></div>
 
   <article class='img-box'>
-    <img src= "<%= product.picture %>" width="500" height="500" alt="image of <%= product.name %>">
+    <%= image_tag "#{product.picture}", width: "500", height: "500", alt: "image of #{product.name}" %>
   </article>
 
   <article class='show-box'>
