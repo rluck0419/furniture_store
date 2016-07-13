@@ -9,6 +9,7 @@
   color: $header-button-color;
   text-align: center;
   margin: 1.25em 0 0.75em 0;
+  font-size: 1.5em;
 }
 
 body {
@@ -140,6 +141,12 @@ body {
 .info {
   text-align: left;
   margin: 0.5em 0;
+}
+
+.list-header{
+  font-size: 2em;
+  text-align: center;
+  padding: 0 0 0.5em 0;
 }
 
 h2 {

@@ -1,7 +1,7 @@
 <div class='button'><%= link_to(image_tag("http://i.imgur.com/aztiI42.jpg", width: "60", height: "60", alt: "Home"), "/") %></div>
 <div class='button2'><%= link_to(image_tag("http://i.imgur.com/9hp55zN.jpg", width: "60", height: "60", alt: "Back"), "/categories") %></div>
 
-<h2><%= category.category_name %> products</h2>
+<div class='list-header'><%= category.category_name %> products</div>
 <% category.products.each do |product| %>
   <article class='index-box'>
     <h3 class='item-pic'><%= image_tag product.picture, width: "200", height: "200", alt: "image of #{product.name}" %></h3>
