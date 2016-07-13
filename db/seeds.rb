@@ -10,7 +10,7 @@
   4.times do
     Product.create!(
       name: Faker::Commerce.product_name,
-      price: Faker::Commerce.price.round,
+      price: Faker::Commerce.price.round * 9000,
       picture: Faker::Avatar.image,
       condition: ['good', 'average', 'mint'].sample,
       on_clearance: [true, false].sample,

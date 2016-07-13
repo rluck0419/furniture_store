@@ -9,11 +9,13 @@
     <h3 class='show_name'><%= product.name %></h3>
     <p class='price'>Price</p>
     <p class='info'>Listed at: $<%= product.price %></p>
-    <p class='info'>Current price: $<%= product.display_price %>
     <% if product.on_clearance %>
-      <%= "- 10% off!!!" if product.condition == 'good' %>
-      <%= "- 20% off!!!" if product.condition == 'average' %>
-    <% end %></p>
+      <p class='info'>
+        Current price: $<%= product.display_price %>
+        <%= "- 10% off!!!" if product.condition == 'good' %>
+        <%= "- 20% off!!!" if product.condition == 'average' %>
+      </p>
+    <% end %>
     <p class='condition'>Condition</p>
     <p class='info'>This item is in <%= product.condition %> condition.
     Quantity in stock: <%= product.quantity %></p>

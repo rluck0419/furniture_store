@@ -3,30 +3,30 @@ class ProductsController < ApplicationController
     render template: 'products/index.html.erb', locals: { products: Product.all }
   end
 
-  def index_automotive
+  def index_shoes
     products = []
     Product.all.each do |product|
-      if product.category.category_name == 'Automotive'
+      if product.category.category_name == 'Shoes'
         products << product
       end
     end
     render template: 'products/category_index.html.erb', locals: { products: products }
   end
 
-  def index_electronics
+  def index_beauty
     products = []
     Product.all.each do |product|
-      if product.category.category_name == 'Electronics'
+      if product.category.category_name == 'Beauty'
         products << product
       end
     end
     render template: 'products/category_index.html.erb', locals: { products: products }
   end
 
-  def index_industrial
+  def index_clothing
     products = []
     Product.all.each do |product|
-      if product.category.category_name == 'Industrial'
+      if product.category.category_name == 'Clothing'
         products << product
       end
     end
@@ -43,10 +43,10 @@ class ProductsController < ApplicationController
     render template: 'products/category_index.html.erb', locals: { products: products }
   end
 
-  def index_music
+  def index_industrial
     products = []
     Product.all.each do |product|
-      if product.category.category_name == 'Music'
+      if product.category.category_name == 'Industrial'
         products << product
       end
     end

@@ -11,8 +11,7 @@
     </p>
 
     <p class='item_info'>
-      Current Price: $<%= product.display_price %>
-      <%= "- #{product.discount_amount}% off!!!" if product.on_clearance && product.condition != 'mint' %>
+      <%= "Current Price: $ #{product.display_price} - #{product.discount_amount}% off!!!" if product.on_clearance && product.condition != 'mint' %>
     </p>
 
     <p>
