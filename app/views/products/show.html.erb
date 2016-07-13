@@ -1,12 +1,12 @@
 <div class='button'><a href="/"><img src="http://i.imgur.com/aztiI42.jpg" width="60" height="60" alt="Home"></a></div>
 <div class='button2'><a href="/products"><img src="http://i.imgur.com/9hp55zN.jpg" width="60" height="60" alt="Back"></a></div>
 
-  <article class='img_box'>
+  <article class='img-box'>
     <img src= "<%= product.picture %>" width="500" height="500" alt="image of <%= product.name %>">
   </article>
 
-  <article class='show_box'>
-    <h3 class='show_name'><%= product.name %></h3>
+  <article class='show-box'>
+    <h3 class='show-name'><%= product.name %></h3>
     <p class='price'>Price</p>
     <p class='info'>Listed at: $<%= product.price %></p>
     <% if product.on_clearance %>

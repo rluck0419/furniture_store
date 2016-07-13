@@ -1,0 +1,15 @@
+<div class='button'><a href="/"><img src="http://i.imgur.com/aztiI42.jpg" width="60" height="60" alt="Home"></a></div>
+<div class='button2'><a href="/products"><img src="http://i.imgur.com/9hp55zN.jpg" width="60" height="60" alt="Back"></a></div>
+
+<h2>All Categories</h2>
+<% categories.each do |category| %>
+  <article class='index-box'>
+    <h3 class='item-pic'><img src= "<%= Faker::Avatar.image %>" width="200" height="200" alt="image of <%= category.category_name %>"></h3>
+    <h4 class='category-name'><a href="/categories/<%= category.id %>"><%= category.category_name %></a></h4>
+  </article>
+<% end %>
+
+<article class='index-box'>
+  <h3 class='item-pic'><img src= "<%= Faker::Avatar.image %>" width="200" height="200" alt="image of all products"></h3>
+  <h4 class='category-name'><a href="/products">All Products</a></h4>
+</article>

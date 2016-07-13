@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20160712220631) do
 
   create_table "categories", force: :cascade do |t|
-    t.string "category_name"
+    t.string "category-name"
   end
 
   create_table "products", force: :cascade do |t|
