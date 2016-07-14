@@ -9,7 +9,7 @@
     <h3 class='show-name'><%= product.name %></h3>
     <p class='price'>Price</p>
     <p class='info'>Listed at: $<%= product.price %></p>
-    <% if product.on_clearance %>
+    <% if product.on_clearance && product.condition != 'mint' %>
       <p class='info'>
         Current price: $<%= product.display_price %>
         <%= "- 10% off!!!" if product.condition == 'good' %>
@@ -17,8 +17,8 @@
       </p>
     <% end %>
     <p class='condition'>Condition</p>
-    <p class='info'>This item is in <%= product.condition %> condition.
-    Quantity in stock: <%= product.quantity %></p>
+    <p class='info'>This item is in <%= product.condition %> condition.</p>
+    <p class='info'>Quantity in stock: <%= product.quantity %></p>
     <p class='cat-button'><%= link_to "Edit Product", "/products/#{product.id}/edit" %></p>
     <p class='cat-button'><%= link_to "New Product", "/products/new" %></p>
   </article>
