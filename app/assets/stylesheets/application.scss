@@ -28,11 +28,10 @@ body {
   border-radius: 0.1em;
   vertical-align: top;
   transition: all 0.4s ease;
-}
-
-.index-box:hover {
-  box-shadow: 0em 0.4em 2em $shadow-color;
-  transition: all 0.4s ease;
+  &:hover {
+    box-shadow: 0em 0.4em 2em $shadow-color;
+    transition: all 0.4s ease;
+  }
 }
 
 .item-info {
@@ -84,11 +83,10 @@ body {
   padding: 0.25em 0.5em;
   margin: 1em;
   transition: all 0.4s ease;
-}
-
-.item-button a:hover {
-  background-color: $hover-color;
-  transition: all 0.4s ease
+  &:hover {
+    background-color: $hover-color;
+    transition: all 0.4s ease
+  }
 }
 
 .item-button2 a {
@@ -99,11 +97,10 @@ body {
   border-radius: 0.25em;
   padding: 0.25em 0.5em;
   transition: all 0.4s ease;
-}
-
-.item-button2 a:hover {
-  background-color: $hover-color;
-  transition: all 0.4s ease;
+  &:hover {
+    background-color: $hover-color;
+    transition: all 0.4s ease;
+  }
 }
 
 .more-info {

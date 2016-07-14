@@ -19,6 +19,7 @@
     <p class='condition'>Condition</p>
     <p class='info'>This item is in <%= product.condition %> condition.</p>
     <p class='info'>Quantity in stock: <%= product.quantity %></p>
+    <p class='info'>Category: <%= product.category.category_name %></p>
     <p class='cat-button'><%= link_to "Edit Product", "/products/#{product.id}/edit" %></p>
     <p class='cat-button'><%= link_to "New Product", "/products/new" %></p>
   </article>

@@ -18,27 +18,27 @@
 
     <div class="input-group">
       <label for="price">Price:</label>
-      <%= text_area_tag :price, product.price %>
+      <%= number_field_tag :price, product.price, min: 1 %>
     </div>
 
     <div class="input-group">
       <label for="condition">Condition:</label>
-      <%= text_area_tag :condition, product.condition %>
+      <%= select_tag :condition, options_for_select(['mint', 'good', 'average'], product.condition) %>
     </div>
 
     <div class="input-group">
       <label for="on_clearance">On Clearance?</label>
-      <%= text_area_tag :on_clearance, product.on_clearance %>
+      <%= check_box_tag :on_clearance, product.on_clearance, false %>
     </div>
 
     <div class="input-group">
       <label for="quantity">Quantity:</label>
-      <%= text_area_tag :quantity, product.quantity %>
+      <%= number_field_tag :quantity, product.quantity, min: 0 %>
     </div>
 
     <div class="input-group">
-      <label for="category_id">Category (#):</label>
-      <%= text_area_tag :category_id, product.category_id %>
+      <label for="category_id">Category:</label>
+      <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :category_name, product.category_id) %>
     </div>
 
     <div class="actions">
