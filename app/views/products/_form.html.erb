@@ -1,21 +1,41 @@
 <h2><%= form_title %></h2>
 
 <div class="form">
-  <% if post.errors.any? %>
-    <% post.errors.full_messages.each do |msg| %>
+  <% if product.errors.any? %>
+    <% product.errors.full_messages.each do |msg| %>
       <p> <%= msg %></p>
     <% end %>
   <% end %>
 
   <%= form_tag(form_url, method: form_action) do %>
     <div class="input-group">
-      <label for="title">Title</label>
-      <%= text_field_tag :title, post.title %>
+      <label for="name">Name</label>
+      <%= text_field_tag :name, product.name %>
     </div>
 
     <div class="input-group">
-      <label for="body">Body</label>
-      <%= text_area_tag :body, post.body %>
+      <label for="price">Price</label>
+      <%= text_area_tag :price, product.price %>
+    </div>
+
+    <div class="input-group">
+      <label for="condition">Condition:</label>
+      <%= text_area_tag :condition, product.condition %>
+    </div>
+
+    <div class="input-group">
+      <label for="on_clearance">On Clearance?</label>
+      <%= text_area_tag :on_clearance, product.on_clearance %>
+    </div>
+
+    <div class="input-group">
+      <label for="quantity">Quantity:</label>
+      <%= text_area_tag :quantity, product.quantity %>
+    </div>
+
+    <div class="input-group">
+      <label for="category_id">Category (#):</label>
+      <%= text_area_tag :category_id, product.category_id %>
     </div>
 
     <div class="actions">
