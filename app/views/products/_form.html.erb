@@ -1,4 +1,7 @@
-<h2><%= form_title %></h2>
+<div class='button'><%= link_to(image_tag("http://i.imgur.com/aztiI42.jpg", width: "75", height: "75", alt: "Home"), "/") %></div>
+<div class='button2'><%= link_to(image_tag("http://i.imgur.com/9hp55zN.jpg", width: "75", height: "75", alt: "Back"), :back) %></div>
+
+<h2 class='form-header'><%= form_title %></h2>
 
 <div class="form">
   <% if product.errors.any? %>

@@ -1,5 +1,5 @@
-<div class='button'><%= link_to(image_tag("http://i.imgur.com/aztiI42.jpg", width: "60", height: "60", alt: "Home"), "/") %></div>
-<div class='button2'><%= link_to(image_tag("http://i.imgur.com/9hp55zN.jpg", width: "60", height: "60", alt: "Back"), "/products") %></div>
+<div class='button'><%= link_to(image_tag("http://i.imgur.com/aztiI42.jpg", width: "75", height: "75", alt: "Home"), "/") %></div>
+<div class='button2'><%= link_to(image_tag("http://i.imgur.com/9hp55zN.jpg", width: "75", height: "75", alt: "Back"), "/products") %></div>
 
   <article class='img-box'>
     <%= image_tag "#{product.picture}", width: "500", height: "500", alt: "image of #{product.name}" %>
@@ -19,6 +19,6 @@
     <p class='condition'>Condition</p>
     <p class='info'>This item is in <%= product.condition %> condition.
     Quantity in stock: <%= product.quantity %></p>
-    <%= link_to "Edit Product", "/products/#{product.id}/edit", class: "edit-button" %>
-    <%= link_to "New Product", "/products/new", class: "new-button" %>
+    <p class='cat-button'><%= link_to "Edit Product", "/products/#{product.id}/edit" %></p>
+    <p class='cat-button'><%= link_to "New Product", "/products/new" %></p>
   </article>
