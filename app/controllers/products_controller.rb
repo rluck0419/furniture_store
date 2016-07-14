@@ -26,6 +26,8 @@ class ProductsController < ApplicationController
     product.on_clearance = params[:on_clearance]
     product.quantity = params[:quantity]
     product.category_id = params[:category_id]
+    product.save
+    redirect_to "/products/#{product.id}"
   end
 
   def edit
@@ -42,5 +44,7 @@ class ProductsController < ApplicationController
     product.on_clearance = params[:on_clearance]
     product.quantity = params[:quantity]
     product.category_id = params[:category_id]
+    product.save
+    redirect_to "/products/#{product.id}"
   end
 end
